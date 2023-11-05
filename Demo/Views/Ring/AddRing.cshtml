@@ -1,0 +1,117 @@
+﻿@model Demo.Models.Ring
+@{
+    ViewBag.Title = "AddRing";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+@using (Html.BeginForm("AddRing", "Ring", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Thêm sản phẩm</h2>
+
+        @using (Html.BeginForm("AddRing", "Ring", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- RingID -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.RingID)
+                @Html.EditorFor(model => model.RingID, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Brand -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.Brand)
+                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Material -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.Material)
+                @Html.EditorFor(model => model.Material, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- JewelryType -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.JewelryType)
+                @Html.EditorFor(model => model.JewelryType, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Price -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.Price)
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Collection -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.Collection)
+                @Html.EditorFor(model => model.Collection, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- GoldCarat -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.GoldCarat)
+                @Html.EditorFor(model => model.GoldCarat, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- GemType -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.GemType)
+                @Html.EditorFor(model => model.GemType, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.Gender)
+                @Html.DropDownListFor(model => model.Gender, new SelectList(new List<string> { "Nam", "Nữ", "Giới tính khác" }), "Chọn giới tính", new { @class = "form-control" })
+            </div>
+
+            <!-- MaterialColor -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaterialColor)
+                @Html.EditorFor(model => model.MaterialColor, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <!-- Form group for ImagePro (hình ảnh) -->
+            <div class="form-group">
+                @Html.LabelFor(model => model.ImagePro)
+                <input type="file" name="imageFile" /> <!-- Input to upload a new image -->
+            </div>
+
+            <!-- Submit button to save changes -->
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+            <!-- Link to go back to the "SeeRing" action -->
+            <div class="form-actions no-color">
+                @Html.ActionLink("Quay lại", "SeeRing")
+            </div>
+        }
+    </body>
+</html>
+
+
+<style>
+    body {
+        justify-content: center;
+        text-align: center;
+        display: list-item;
+    }
+
+    header {
+        text-align: left;
+        background-color: antiquewhite;
+        width: 100%;
+        height: 50px;
+    }
+</style>
+}

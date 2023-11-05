@@ -1,0 +1,118 @@
+﻿@model Demo.Models.Customer
+
+@{
+    ViewBag.Title = "LoginCustomer";
+    Layout = null;
+}
+<body>
+    <div id="wrapper">
+        <form action="">
+
+            <h3>Đăng Nhập</h3>
+            @using (Html.BeginForm("LoginCustomer", "LoginUser", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="from-group">
+                    @Html.TextBoxFor(model => model.EmailCus, new { placeholder = "Nhập địa chỉ email" })
+                    @Html.ValidationMessageFor(model => model.EmailCus)
+                    <!-- Hiển thị lỗi nếu email không hợp lệ -->
+                </div>
+
+                <div class="from-group">
+                    @Html.PasswordFor(model => model.PassCus, new { placeholder = "Nhập mật khẩu" })
+                    @Html.ValidationMessageFor(model => model.PassCus)
+                    <!-- Hiển thị lỗi nếu mật khẩu không hợp lệ -->
+                </div>  
+                <input type="submit" value="Login" id="btn-login">
+                <br>
+                <a href="@Url.Action("RegisterCustomer", "LoginUser")" id="btn-regiEster">Đăng Ký</a>   
+                <!-- Liên kết đến trang Đăng ký -->
+            }   
+        </form>
+    </div>
+</body>
+<style>
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+    }
+
+    * {
+        box-sizing: border-box;
+    }       
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+    }
+
+    form {
+        border: 1px solid #dadce0;
+        border-radius: 5px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    input {
+        height: 50px;
+        width: 300px;
+        outline: none;
+        border: 1px solid #dadce0;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: inherit;
+        color: #202124;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .from-group {
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        padding: 0px 5px;
+        left: 20px;
+        top: 35%;
+        pointer-events: none;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .from-group input:focus {
+        border: 2px solid #1a73e8;
+    }
+
+        .from-group input:focus + label, .from-group input:valid + label {
+            top: 0px;
+            font-size: 13px;
+            color: #1a73e8;
+        }
+
+    input#btn-login {
+        background: #1a73e8;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        input#btn-login:hover {
+            opacity: 0.70;
+        }
+
+    #btn-register {
+        text-decoration: none;
+        font-size: 10px;
+        background: #fff;
+        color: black;
+        cursor: pointer;
+        box-shadow: inset;
+    }
+</style>

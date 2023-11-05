@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d41f7c51b77743ad9ef6f1329e991e76" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="DPSportStoreModel.AdminUser" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DPSportStoreModel.Category" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="DPSportStoreModel.Customer" Width="1.5" PointX="2.625" PointY="1.625" />
+        <EntityTypeShape EntityType="DPSportStoreModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="DPSportStoreModel.OrderPro" Width="1.5" PointX="3" PointY="5.125" />
+        <AssociationConnector Association="DPSportStoreModel.FK__OrderPro__IDCus__52593CB8" />
+        <AssociationConnector Association="DPSportStoreModel.FK__OrderDeta__IDOrd__5629CD9C" />
+        <EntityTypeShape EntityType="DPSportStoreModel.Ring" Width="1.5" PointX="8.125" PointY="2.25" />
+        <AssociationConnector Association="DPSportStoreModel.FK_Ring_Category" />
+        <AssociationConnector Association="DPSportStoreModel.FK_OrderDetail_Ring" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

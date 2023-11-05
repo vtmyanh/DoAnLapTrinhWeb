@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<head>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="~/Css/_layout.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <div class="info">
+            <div class="phone-number">
+                <ul>
+                    <li>
+                        <i class='fas fa-headset'></i>
+                        1800 54 54 57
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        Quan Hệ Cổ Đông
+                    </li>
+                    <li>
+                        <i class='fas fa-map-marked-alt'></i>
+                        Cửa Hàng
+                    </li>
+                </ul>
+            </div>
+
+            <div class="img">
+                <img src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" />
+            </div>
+
+            <div class="cuoi">
+                <ul>
+                    <li>
+                        <i class='fas fa-shopping-cart'></i>
+                        Giỏ Hàng
+                    </li>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="~/LoginUser/LogOutUser"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="menu">
+            <ul class="nav-menu">
+                <li><a href="#">Nhẫn</a></li>
+                <li><a href="#">Bông Tai</a></li>
+                <li><a href="#">Dây Cổ</a></li>
+                <li><a href="#">Vòng</a></li>
+                <li><a href="#">Đồng Hồ</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="#">Thương Hiệu</a>
+                        <div class="dropdown-content">
+                            <div class="row"
+                                <div class="column3">
+                                    <p>
+                                        <i class="fas fa-award"></i>Thương Hiệu
+                                    </p>
+                                </div>
+                                <div class="column1">
+                                    <img src="https://cdn.pnj.io/images/2023/brand-search-bar/watch.svg" />
+
+                                    <img src="https://cdn.pnj.io/images/2023/brand-search-bar/style.svg" />
+
+                                    <img src="https://cdn.pnj.io/images/2023/brand-search-bar/disney.svg" />
+
+                                    <img src="https://cdn.pnj.io/images/2023/brand-search-bar/pnj.svg" />
+
+                                    <img src="https://cdn.pnj.io/images/2023/brand-search-bar/silver.svg" />
+
+                                    <img src="https://cdn.pnj.io/images/2023/04/hello-kitty/sanrio2.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li><a href="#">Quà Tặng</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm nhanh " />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+        </div>
+        <div class="ty-breadcrumbs-clearfix">
+            <a href="https://www.pnj.com.vn/" class="ty-breadcrumbs__a">Trang chủ</a>
+        </div>
+        <!--Slide-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.pnj.io/images/promo/190/16-halloween-1972x640CTA.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/190/kim-cuong-t10-23-1972x640_copy.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/187/WATCH__1972x640__CTA_.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        @RenderBody()
+    </div>
+</body>
+<hr>
+<header>
+    <img src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" alt="PNJ Logo" width="200" height="50">
+</header>
+<!--Footer-->
+
+<div class="container">
+    <div class="left">
+        <br>
+        <h2>© 2017 Công Ty Cổ Phần Vàng Bạc Đá Quý Phú Nhuận</h2>
+        <p>
+            170E Phan Đăng Lưu, P.3, Q.Phú Nhuận, TP.Hồ Chí Minh<br>
+            ÐT: <a href="tel:02839951703">02839951703</a> - Fax: <a href="tel:02839951702">02839951702</a>
+        </p>
+        <p>
+            <a href="https://cdn.pnj.io/images/quan-he-co-dong/2023/10b-20230207-PNJ-GCN-DKDN-lan-35-CBTT-File-nhe.pdf" class="blue-link">
+                Giấy chứng nhận đăng ký doanh nghiệp: 0300521758 do Sở Kế hoạch & Đầu tư TP.HCM cấp lần đầu ngày 02/01/2004. Ngành, nghề kinh doanh
+
+            </a>
+        </p>
+        <br>
+        <p>
+            Gọi mua: <a href="tel:1800545457" class="blue-link">1800545457 (phím 1)</a><br>
+            Khiếu nại: <a href="tel:1800545457" class="blue-link">1800545457 (phím 2)</a>
+        </p>
+    </div>
+    <div class="center">
+        <h2>VỀ PNJ</h2>
+        <ul>
+            <div class="nd">
+            <li><a href="https://www.pnj.com.vn/cau-chuyen-pnj.html">Câu chuyện PNJ</a></li>
+            <li><a href="https://tuyendung.pnj.com.vn/">Tuyển dụng</a></li>
+            <li><a href="https://export.pnj.com.vn/">Xuất khẩu</a></li>
+            <li><a href="https://pnjsi.pnj.com.vn/">Kinh doanh sỉ</a></li>
+            <li><a href="https://pnjlab.com.vn/vn/Default.aspx">Kinh doanh kim cương</a></li>
+            <li><a href="https://giavang.pnj.com.vn/">kinh doanh vàng miếng</a></li>
+     </div>
+    </ul>
+</div>
+<div class="right">
+    <h2>DỊCH VỤ KHÁCH HÀNG</h2>
+    <ul>
+        <li><a href="https://www.pnj.com.vn/blog/huong-dan-do-size-trang-suc/">Hướng dẫn đo size trang sức</a></li>
+        <li><a href="https://www.pnj.com.vn/tra-gop/">Mua hàng trả góp</a></li>
+        <li><a href="https://www.pnj.com.vn/huong-dan-mua-hang-va-thanh-toan.html">Hướng dẫn mua hàng và thanh toán</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-hoan-tien.html">Chính sách hoàn tiền</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
+        <li><a href="https://www.pnj.com.vn/blog/cam-nang-su-dung-trang-suc/">Cẩm nang sử dụng trang sức</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-bao-hanh-va-thu-doi.html">Chính sách bảo hành thu đổi</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-khach-hang-than-thiet.html">Chính sách khách hàng thân thiết</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-bao-mat-thong-tin-khach-hang.html">Chính sách bảo mật thông tin khách hàng</a></li>
+        <li><a href="https://www.pnj.com.vn/chinh-sach-xu-ly-du-lieu-ca-nhan.html">Chính sách xử lý dữ liệu cá nhân</a></li>
+        <li><a href="https://www.pnj.com.vn/cau-hoi-thuong-gap.html">Câu hỏi thường gặp</a></li>
+    </ul>
+    <p><b>PHƯƠNG THỨC THANH TOÁN</b></p>
+    <div class="tt">
+        <img src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/visa.svg" alt="Visa">
+        <img src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/mastercard.svg" alt="Mastercard">
+        <img src="https://www.pnj.com.vn/design/themes/pnjrovski/media/images/payments/jcb.svg" alt="JCB">
+        <p><b>CHỨNG NHẬN</b></p>
+        <img src="https://cdn.pnj.io/images/image-update/op-da-thong-bao-bo-cong-thuong-183x60.png" alt="Chứng nhận bộ công thương" width="150" height="50">
+    </div>
+</div>
+<div class="ty-footer ty-float-left">
+    <div class="connect-us">
+        <h2 class="ty-footer-general__header">
+            <h2><span>KẾT NỐI TẠI</span></h2>
+        </h2>
+        <div class="connect-us-outer">
+            <a class="connect-link" aria-label="PNJ Facebook" rel="nofollow noopener" target="_blank" href="https://www.facebook.com/PNJ.COM.VN" title="PNJ Facebook" alt="PNJ Facebook">
+                <i>
+                    <img class="img-lazyload" data-src="" alt="Facebook" src="https://cdn.pnj.io/images/image-update/footer/facebook.svg" style="opacity: 1;height:50px; width:25px;">
+                </i>
+            </a>
+            <a class="connect-link" aria-label="Instagram" rel="nofollow noopener" target="_blank" href="https://www.instagram.com/pnj_jewelry/" title="Instagram" alt="Instagram">
+                <i>
+                    <img class="img-lazyload" data-src="" alt="Instagram" src="https://cdn.pnj.io/images/image-update/footer/instagram.svg" style="opacity: 1;height:50px; width:25px;">
+                </i>
+            </a>
+            <a class="connect-link" aria-label="Youtube" rel="nofollow noopener" target="_blank" href="https://www.youtube.com/user/PhuNhuanJewelry" title="Youtube" alt="Youtube">
+                <i>
+                    <img class="img-lazyload" data-src="" alt="Youtube" src="https://cdn.pnj.io/images/image-update/footer/youtube.svg" style="opacity: 1;height:50px; width:25px;">
+                </i>
+            </a>
+            <a class="connect-link" aria-label="Email" rel="nofollow noopener" target="_blank" href="mailto:shop@pnj.com.vn" title="Email" alt="Email">
+                <i>
+                    <img class="img-lazyload" data-src="" alt="Email" src="https://cdn.pnj.io/images/image-update/footer/email.svg" style="opacity: 1;height:50px; width:25px;">
+                </i>
+            </a>
+        </div>
+    </div>
+    <h2 class="ty-footer-general__header title-zalo-api">
+        <span>Quan tâm Zalo OA PNJ</span>
+    </h2>
+    <p class="text-zalo-api">Nhận các thông tin khuyến mãi hấp dẫn</p>
+    <div class="zalo-follow-only-button" data-oaid="4082136522598975631" bis_skin_checked="1"></div>
+    <a href="https://zalo.me/trangsucpnjofficial" target="_blank">
+        <img class="img-lazyload has-shadow" src="https://cdn.pnj.io/images/2023/zalo.png" data-src="" alt="QUAN TÂM ZALO OA PNJ" style="opacity: 1; width: auto; height: auto;">
+    </a>
+</div>
+    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+</body>
+</html>

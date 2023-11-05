@@ -1,0 +1,103 @@
+﻿@model Demo.Models.Ring
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Xóa Sản Phâm</h2>
+<div>
+    <h4>Ring</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RingID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JewelryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JewelryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Collection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Collection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoldCarat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoldCarat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GemType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GemType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePro)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "SeeRing")
+        </div>
+    }
+</div>

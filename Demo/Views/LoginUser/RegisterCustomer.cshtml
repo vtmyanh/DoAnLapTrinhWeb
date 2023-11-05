@@ -1,0 +1,75 @@
+﻿@model Demo.Models.Customer
+
+@{
+    ViewBag.Title = "RegisterCustomer";
+    Layout = "~/Views/Shared/layoutdangnhapandangky.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row justify-content-around">
+                @using (Html.BeginForm("RegisterCustomer", "LoginUser", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                     <form class="col-md-8 bg-light p-3">
+                    <h1 class="text-center text-uppercase h3">Đăng Kí Tài khoản</h1>
+                    <div class="form-group">
+                        <label for="NameCus">Họ và tên:</label>
+                        @Html.TextBoxFor(model => model.NameCus, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NameCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneCus">Số điện thoại:</label>
+                        @Html.TextBoxFor(model => model.PhoneCus, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PhoneCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="EmailCus">Email:</label>
+                        @Html.TextBoxFor(model => model.EmailCus, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.EmailCus)
+                    </div>
+                    <div>
+                        <label for="PassCus">Mật khẩu:</label>
+                        @Html.PasswordFor(model => model.PassCus)
+                        @Html.ValidationMessageFor(model => model.PassCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmPassCus">Xác nhận mật khẩu:</label>
+                        @Html.PasswordFor(model => model.ConfirmPassCus)
+                        @Html.ValidationMessageFor(model => model.ConfirmPassCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="DateOfBirthCus">Ngày sinh:</label>
+                        @Html.TextBoxFor(model => model.DateOfBirthCus, new { type = "date" })
+                        @Html.ValidationMessageFor(model => model.DateOfBirthCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="AddressCus">Địa chỉ:</label>
+                        @Html.TextAreaFor(model => model.AddressCus)
+                        @Html.ValidationMessageFor(model => model.AddressCus)
+                    </div>
+                    <div class="form-group">
+                        <label for="CityCus">Thành phố:</label>
+                        @Html.TextBoxFor(model => model.CityCus)
+                        @Html.ValidationMessageFor(model => model.CityCus)
+                    </div>
+                    <!-- Include the rest of your form fields with Razor syntax as you did previously -->
+                    <div class="form-group">
+                        <input type="submit" value="Đăng ký" class="btn-primary btn btn-block">
+                    </div>
+                    <p>Bạn đã có tài khoản rồi? <button type="button" onclick="location.href='@Url.Action("LoginCustomer", "LoginUser")'">Đăng nhập</button></p>
+                </form>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

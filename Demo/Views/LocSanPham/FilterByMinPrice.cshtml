@@ -1,0 +1,88 @@
+﻿@model Demo.Models.Ring
+@{
+    ViewBag.Title = "FilterByMinPrice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FilterByMinPrice</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JewelryType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Collection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoldCarat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GemType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePro)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JewelryType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Collection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoldCarat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GemType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePro)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RingID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RingID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RingID })
+            </td>
+        </tr>
+    }
+
+</table>
