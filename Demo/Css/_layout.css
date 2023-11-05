@@ -121,7 +121,7 @@ hr {
         border: none;
         outline: none;
         color: white;
-        padding: 14px 16px;
+        padding: 14px 0px;
         background-color: inherit;
         font: inherit;
         margin: 0;
@@ -330,4 +330,11 @@ img {
 
 .ty-footer-general__header {
     font-size: 1rem;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 10px !important;
+    border: unset !important;
 }

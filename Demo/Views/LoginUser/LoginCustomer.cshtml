@@ -6,12 +6,11 @@
 }
 <body>
     <div id="wrapper">
-        <form action="">
-
-            <h3>Đăng Nhập</h3>
+            
             @using (Html.BeginForm("LoginCustomer", "LoginUser", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
+                <h3>Đăng Nhập</h3>
 
                 <div class="from-group">
                     @Html.TextBoxFor(model => model.EmailCus, new { placeholder = "Nhập địa chỉ email" })
@@ -24,12 +23,12 @@
                     @Html.ValidationMessageFor(model => model.PassCus)
                     <!-- Hiển thị lỗi nếu mật khẩu không hợp lệ -->
                 </div>  
+                <p class="error">@ViewBag.ThongBao</p>
                 <input type="submit" value="Login" id="btn-login">
                 <br>
                 <a href="@Url.Action("RegisterCustomer", "LoginUser")" id="btn-regiEster">Đăng Ký</a>   
                 <!-- Liên kết đến trang Đăng ký -->
             }   
-        </form>
     </div>
 </body>
 <style>
@@ -114,5 +113,8 @@
         color: black;
         cursor: pointer;
         box-shadow: inset;
+    }
+    .error {
+        color: red
     }
 </style>

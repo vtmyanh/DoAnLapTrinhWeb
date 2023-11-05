@@ -2,6 +2,8 @@
 <head>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
     <link href="~/Css/_layout.css" rel="stylesheet" />
 </head>
 <body>
@@ -13,10 +15,10 @@
                         <i class='fas fa-headset'></i>
                         1800 54 54 57
                     </li>
-                    <li>
+                    @*<li>
                         <i class="fas fa-user"></i>
                         Quan Hệ Cổ Đông
-                    </li>
+                    </li>*@
                     <li>
                         <i class='fas fa-map-marked-alt'></i>
                         Cửa Hàng
@@ -34,7 +36,7 @@
                         <i class='fas fa-shopping-cart'></i>
                         Giỏ Hàng
                     </li>
-                    <ul class="dropdown-menu dropdown-user">
+                    
                         <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
@@ -45,7 +47,7 @@
                         <li>
                             <a href="~/LoginUser/LogOutUser"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
-                    </ul>
+                    
                 </ul>
             </div>
         </div>
@@ -61,7 +63,7 @@
                     <div class="dropdown">
                         <a class="dropbtn" href="#">Thương Hiệu</a>
                         <div class="dropdown-content">
-                            <div class="row"
+                            <div class="row">
                                 <div class="column3">
                                     <p>
                                         <i class="fas fa-award"></i>Thương Hiệu
@@ -85,7 +87,7 @@
                     </div>
 
                 </li>
-                <li><a href="#">Quà Tặng</a></li>
+                <li><a href="#">Quà Tặng </a></li>
             </ul>
             <div class="search">
                 <input type="text" placeholder="Tìm kiếm nhanh " />
@@ -97,7 +99,47 @@
             <a href="https://www.pnj.com.vn/" class="ty-breadcrumbs__a">Trang chủ</a>
         </div>
         <!--Slide-->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div id="banner" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#banner" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.pnj.io/images/promo/190/kim-cuong-t10-23-1972x640_copy.jpg" class="d-block w-100" alt="..." >
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/191/tabsale-chung-t11-1972x640-CTA.png" class="d-block w-100" alt="..." >
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/191/t11-WATCH__1972x640__CTA_.jpg" class="d-block w-100" alt="..." >
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/189/ahamove-1972x640CTA.jpg" class="d-block w-100" alt="..." >
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://cdn.pnj.io/images/promo/173/egift-t7-1972x640CTA__1_.jpg" class="d-block w-100" alt="..." />
+                </div>
+            </div>
+
+
+        </div>
+
+        @*<div id="banner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                <li data-target="#banner" data-slide-to="1"></li>
+                <li data-target="#banner" data-slide-to="2"></li>
+            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://cdn.pnj.io/images/promo/190/16-halloween-1972x640CTA.jpg" class="d-block w-100" alt="...">
@@ -109,16 +151,16 @@
                     <img src="https://cdn.pnj.io/images/promo/187/WATCH__1972x640__CTA_.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-        </div>
+        </div>*@
     </div>
     <div class="content">
         @RenderBody()
     </div>
 </body>
 <hr>
-<header>
+
     <img src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" alt="PNJ Logo" width="200" height="50">
-</header>
+
 <!--Footer-->
 
 <div class="container">
@@ -216,6 +258,6 @@
     </a>
 </div>
     </div>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

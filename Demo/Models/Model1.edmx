@@ -150,11 +150,11 @@
         <EntityContainer Name="DPSportStoreEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AdminUsers" EntityType="DPSportStoreModel.AdminUser" />
           <EntitySet Name="Categories" EntityType="DPSportStoreModel.Category" />
-          <EntitySet Name="Customers" EntityType="DPSportStoreModel.Customer" />
+          <EntitySet Name="Customer" EntityType="DPSportStoreModel.Customer" />
           <EntitySet Name="OrderDetails" EntityType="DPSportStoreModel.OrderDetail" />
           <EntitySet Name="OrderProes" EntityType="DPSportStoreModel.OrderPro" />
           <AssociationSet Name="FK__OrderPro__IDCus__52593CB8" Association="DPSportStoreModel.FK__OrderPro__IDCus__52593CB8">
-            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Customer" EntitySet="Customer" />
             <End Role="OrderPro" EntitySet="OrderProes" />
           </AssociationSet>
           <AssociationSet Name="FK__OrderDeta__IDOrd__5629CD9C" Association="DPSportStoreModel.FK__OrderDeta__IDOrd__5629CD9C">
@@ -318,7 +318,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Customers">
+          <EntitySetMapping Name="Customer">
             <EntityTypeMapping TypeName="DPSportStoreModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="CityCus" ColumnName="CityCus" />

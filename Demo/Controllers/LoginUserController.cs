@@ -33,14 +33,14 @@ namespace Demo.Controllers
                 }
 
                 // Kiểm tra xem email đã tồn tại trong cơ sở dữ liệu chưa
-                var existingEmail = database.Customers.FirstOrDefault(c => c.EmailCus == customer.EmailCus);
+                var existingEmail = database.Customer.FirstOrDefault(c => c.EmailCus == customer.EmailCus);
                 if (existingEmail != null)
                 {
                     ModelState.AddModelError("EmailCus", "Email này đã được sử dụng.");
                 }
-
+                
                 // Kiểm tra xem số điện thoại đã tồn tại trong cơ sở dữ liệu chưa
-                var existingPhone = database.Customers.FirstOrDefault(c => c.PhoneCus == customer.PhoneCus);
+                var existingPhone = database.Customer.FirstOrDefault(c => c.PhoneCus == customer.PhoneCus);
                 if (existingPhone != null)
                 {
                     ModelState.AddModelError("PhoneCus", "Số điện thoại này đã được sử dụng.");
@@ -55,7 +55,7 @@ namespace Demo.Controllers
                 if (ModelState.IsValid)
                 {
                     // Thêm khách hàng mới vào cơ sở dữ liệu nếu không có lỗi
-                    database.Customers.Add(customer);
+                    database.Customer.Add(customer);
                     database.SaveChanges();
                     // Đăng ký thành công, đặt thông báo vào ViewBag
                     ViewBag.SuccessMessage = "Đăng ký thành công. Bây giờ bạn có thể đăng nhập.";
@@ -84,21 +84,23 @@ namespace Demo.Controllers
                 ModelState.AddModelError(string.Empty, "Tên đăng nhập không được để trống");
             if (string.IsNullOrEmpty(cust.PassCus))
                 ModelState.AddModelError(string.Empty, "Mật khẩu không được để trống");
-
+            
             if (ModelState.IsValid)
             {
+                
                 if (cust.EmailCus == "admin" && cust.PassCus == "123456")
                 {
                     // Nếu là admin, chuyển hướng đến trang khác (ví dụ: AdminDashboard)
                     return RedirectToAction("DangNhap", "HomeAdmin", new { area = "Admin" });
                 }
 
-                var khachhang = database.Customers.FirstOrDefault(k => k.EmailCus == cust.EmailCus && k.PassCus == cust.PassCus);
+                var khachhang = database.Customer.FirstOrDefault(k => k.EmailCus == cust.EmailCus && k.PassCus == cust.PassCus);
+                System.Diagnostics.Debug.WriteLine(khachhang);
                 if (khachhang != null)
                 {
                     ViewBag.ThongBao = "Chúc mừng đăng nhập thành công";
                     Session["taikhoan"] = khachhang;
-                    return RedirectToAction("RegisterCustomer");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
